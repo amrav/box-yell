@@ -80,9 +80,6 @@ script: |
   ## nodejs ##
   source $WERCKER_SOURCE_DIR/install-nodejs.sh
 
-  ## mongodb ##
-  source $WERCKER_SOURCE_DIR/install-mongodb.sh
-
   cat $profile
   cd $HOME
   du -h
