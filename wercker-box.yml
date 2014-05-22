@@ -76,6 +76,13 @@ script: |
 
   echo "export GRADLE_HOME=\"${HOME}/gradle-1.11\"" | sudo tee -a $profile
   echo "export PATH=\"${PATH}:${GRADLE_HOME}/bin\"" | sudo tee -a $profile
+
+  ## nodejs ##
+  source $WERCKER_SOURCE_DIR/install-nodejs.sh
+
+  ## mongodb ##
+  source $WERCKER_SOURCE_DIR/install-mongodb.sh
+
   cat $profile
   cd $HOME
   du -h
